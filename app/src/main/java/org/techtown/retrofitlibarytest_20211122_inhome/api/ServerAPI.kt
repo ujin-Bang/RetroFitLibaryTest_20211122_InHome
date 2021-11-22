@@ -1,6 +1,7 @@
 package org.techtown.retrofitlibarytest_20211122_inhome.api
 
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class ServerAPI {
 
@@ -9,7 +10,7 @@ class ServerAPI {
 //    기본 접속 서버
     private var BASE_URL = "http://3.34.159.73"
 
-         var retrofit : Retroifit? = null //앱이 처음 켜질 때는 없다. => 한번만 만들고 함수를 통해서 공유
+         var retrofit : Retrofit? = null //앱이 처음 켜질 때는 없다. => 한번만 만들고 함수를 통해서 공유
      fun getRetrofit() : Retrofit {
 
          if( retrofit == null) {
